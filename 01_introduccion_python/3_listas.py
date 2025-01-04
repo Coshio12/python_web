@@ -43,3 +43,14 @@ print(datos_mult)
 
 #EXTRA: El metodo type, nos ayuda a saber el tipo de dato de una variable
 print(type(datos))
+
+#tambien podemos concatenar tipos de datos en una sola variable usando la coma
+
+nombre = 'Jose Cossio'
+edad = 23
+
+datos2 = nombre, edad
+print(type(datos2)) #Se vuelve una tupla
+
+#Podemos tambien formatear la informacion es decir, aplicar una forma para mostrar de una mejor manera la informacion
+print(f'Nombre: {nombre} \nEdad: {edad}') #Suele ser una manera mas comoda para mostrar la informacion con el print
