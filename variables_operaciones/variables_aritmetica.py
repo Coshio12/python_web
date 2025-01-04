@@ -1,9 +1,21 @@
 #Conceptos basicos de python
 
 #CREACION DE VARIABLE
-##Variable numerica
-a = 5
-print(a)
+#Las variables se pueden crear de la manera tradicional un nombre y el valor
+n = 10
+a = 'hola'
+print(f'{n} - {a}') #Al gregar una f al inicio del print nos permite colocar diferentes variebles dentro de la funcion print y mostrarlos de una manera mas comoda
+print(n,a)
+
+#Tambien se puede crear varias variables en la misma linea
+c,v,b = 10, 'hola', 5
+print(c,v,b)
+
+#Se puede cambiar los valores de variables ya creadas
+k = c
+print(f'k = {k}')
+k = 50
+print(f'k despues del cambio es {k}')
 
 ##Cadena de caracteres
 b = 'cadena de texto'
@@ -45,19 +57,17 @@ producto = num1 * num2
 print(producto)
 
 #Division
-#Para el cociente de una division es con doble barra
-#cociente = a //b 
 print('----DIVISION----')
 num3 = 50
-num4 = 5
-cociente = num3//num4
-residuo = num3%num4
+num4 = 6
+division = num3/num4
+residuo = num3%num4 #muestra el residuo de la operacion
 
-print(cociente)
+print(division)
 print(residuo)
 
-#Potencia
+#Potencia de un numero
 print('----POTENCIA----')
 print(11**2)
 
-#PARA REALIZAR PRINTS CON CADENAS DE CARACTERES SE TIENE QUE T
+#Estas son las principales operaciones aritmeticas clasicas realizadas en el lenguaje de python
