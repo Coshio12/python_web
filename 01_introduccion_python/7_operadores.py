@@ -71,6 +71,9 @@ print((a==b) or (a != b)) #Resultado True
 print((a==b) or not(a != b)) #Resultado False
 
 #EXPRESION ANIDADA
+#Una expresion anidada hace referencia al orden por el cual se resuelve o se ejecuta una linea de codigo
+#Normalmente suelen existir programas donde una sola linea realiza diferentes acciones
+#Eso es una expresion anidada, dicha tiene un orden para ser resuelta.
 numero_a = 10
 numero_b = 5
 
@@ -80,3 +83,37 @@ print('='*45)
 print('EXPRESION ANIDADA')
 print('='*45)
 print(expresion)
+
+#OPERADORES DE ASIGNACION
+#Son aquellos operadores que buscan simplificar ciertas operaciones, normalmente para las operadores aritmeticos
+print('='*45)
+print('OPERADORES DE ASIGNACION')
+print('='*45)
+
+#Forma normalmente aplicada
+a = 10
+a = a + 5
+print(a)
+
+#Suma en asignacion
+a = 10 
+a += 5 #realiza la misma tarea del anterior ejemplo pero de una manera mas simplificada
+print(a)
+#La sintaxis se puede aplicar para los diferentes operadores logicos
+#Resta en asignacion
+a -= 5
+print(a)
+#Multiplicacion en asignacion
+a *= 5
+print(a)
+#Divsion en asignacion
+a /= 5
+print(a)
+#Potencia en asignacion
+a **= 2
+print(a)
+#Modulo en asignacion
+a = 10
+a %= 5
+print(a)
+
