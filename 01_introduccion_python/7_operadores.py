@@ -3,6 +3,9 @@
 #Devolviendo un valor booleano true (si se la comparacion es verdadera) y false (si la comparacion es falsa)
 
 #Casos con variables numericas
+print('='*45)
+print('OPERADORES RELACIONALES')
+print('='*45)
 numero_1 = 15
 numero_2 = 90
 numero_3 = 15
@@ -38,6 +41,9 @@ print(palabra_2 == palabra_3) #Resultado False
 
 #OPERADORES LOGICOS
 #Operador NOT, es aquella que niega la informacion de una variable
+print('='*45)
+print('OPERADORES LOGICOS')
+print('='*45)
 print(not True) #Resultado False
 print(not False) #Resultado True
 
@@ -63,3 +69,14 @@ print((a==b) or (a != b)) #Resultado True
 #El segundo parentesis devuelve true porque son diferentes
 #El resultado final es false por que al haber un operador not niega el resultado
 print((a==b) or not(a != b)) #Resultado False
+
+#EXPRESION ANIDADA
+numero_a = 10
+numero_b = 5
+
+#Primero resuelve los parentesis, despues operador aritmetico y por ultimo operadores logicos
+expresion= numero_a * numero_b - 2 ** numero_b >= 20 and not (numero_a % numero_b) !=0
+print('='*45)
+print('EXPRESION ANIDADA')
+print('='*45)
+print(expresion)
