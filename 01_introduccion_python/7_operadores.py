@@ -135,3 +135,28 @@ print(r)
 
 r = texto_1 is texto_3
 print(r)
+
+#OPERADOR DE PERTENENCIA
+print("="*45)
+print('OPERADOR DE PERTENENCIA')
+print("="*45)
+#Es la palabra reservada de "in"
+#Dicho operador fue creado para trabajar directamente con caracteres de texto o con lista
+#Con logica de que un determinado valor exista ya sea en una cadena de texto o en una lista
+#No se puede usar este operador con variables de numeros enteros o flotantes
+
+#Ejemplo con cadena de texto
+texto = 'Alejandro'
+r = 'Ale' in texto #Devolvera True, debido a que la cadena Ale esta en la variable
+print(r)
+r = 'ale' in texto #Devuelve False, debido a que la cadena contiene Ale no ale
+print(r)
+
+#Ejemplo en lista
+lista = ['Alejandro', 'Cossio', 25]
+r = 'Cossio' in lista #Devuelve True, porque Cossio si esta en la lista
+print(r)
+r = 25 in lista #Devuelve True, en este caso si se puede usar numeros enteros, debido a que 25 pertenece a un valor de la lista creada
+print(r)
+r = 'Lucas' in lista #Devuelve False, poruqe "Lucas" no existe dentro de la lista
+print(r)
