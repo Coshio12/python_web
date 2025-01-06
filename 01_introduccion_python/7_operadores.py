@@ -117,3 +117,21 @@ a = 10
 a %= 5
 print(a)
 
+#OPERADOR DE IDENTIDAD
+print("="*45)
+print('OPERADOR DE IDENTIDAD')
+print("="*45)
+
+#Este operador de identidad es la palabra reservada "is"
+#Este operador funciona de la misma manera que "==", pero es mayormente usado para comparar objetos
+#Si se usa "is" para comparar numeros, el programa funcionara correctamente, pero recomendara usar "=="
+#Debido a que el "is" es preferible para usar en  objetos
+texto_1 = 'hola'
+texto_2 = 'hola'
+texto_3 = 'Hola'
+
+r = texto_1 is texto_2
+print(r)
+
+r = texto_1 is texto_3
+print(r)
