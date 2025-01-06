@@ -35,3 +35,31 @@ print(palabra_2 == palabra_3) #Resultado False
 
 #Al ser variables mas estrictas las que tienen cadenas de texto, el condenido puede ser igual
 #Pero si se tiene un espacio dentro de la variable, al momento de comparar, se lo toma como un valor diferente
+
+#OPERADORES LOGICOS
+#Operador NOT, es aquella que niega la informacion de una variable
+print(not True) #Resultado False
+print(not False) #Resultado True
+
+#Operador AND, es aquella que compara dos condiciones que si son verdaderas devuelve True, si no, False
+print(True and True) #Resultado True
+print(True and False) #Resultado False
+
+#Operador OR, es aquella que devuelve True si al menos una condicion sea verdadera
+a = 10
+b = 5
+
+#El primer parentesis devuelve false porque no son iguales
+#El segundo parentesis devuelve true porque son diferentes
+#El resultado final es False, porque True y False es False debido a la expresion and, daria true si ambos casos son iguales
+print((a==b) and (a != b)) #Resultado False
+
+#El primer parentesis devuelve false porque no son iguales
+#El segundo parentesis devuelve true porque son diferentes
+#El resultado final es true porque por el operador OR señala que existe almenos un True
+print((a==b) or (a != b)) #Resultado True
+
+#El primer parentesis devuelve false porque no son iguales
+#El segundo parentesis devuelve true porque son diferentes
+#El resultado final es false por que al haber un operador not niega el resultado
+print((a==b) or not(a != b)) #Resultado False
