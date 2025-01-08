@@ -31,3 +31,22 @@ if n % 2 == 0:
     print(f'El numero: {n} es PAR')
 else: 
     print(f'El numero: {n} es IMPAR')
+#Usando condiciones anidadas
+#Vimos que las condiciones anidadas son una forma de expresar en el codigo restricciones para ejecutar diferentes acciones
+#Es la mejor manera para poder realizar diferentes aplicaciones
+#Ejemplo
+n = int(input('Ingresa un numero entero: ')) #Pedimo el numero
+
+if n != 0: #Si el numero es distinto de 0 avanzara al siguiente if
+    if n > 0: #Si el numero mayor a 0 seguira al siguiente if
+        if n % 2 == 0: #Si el residuo del numero entre 2 es igual a 0, devolvera PAR POSITIVO
+            print(f'El numero {n} es PAR POSITIVO')
+        else: #Si el residuo del numero entre 2 no es 0, devolvera IMPAR POSITIVO
+            print(f'El numero {n} es IMPAR POSITIVO')
+    else: # Si el numero es menor a 0 seguira al siguiente if
+        if n % 2 == 0: #Si el residuo del numero entre 2 es igual a 0, devolvera PAR NEGATIVO
+            print(f'El numero {n} es PAR NEGATIVO')
+        else: #Si el residuo del numero entre 2 no es 0, devolvera IMPAR NEGATIVO
+            print(f'El numero {n} es IMPAR NEGATIVO')
+else: #Si el numero es 0, devolvera el mensaje de este else
+    print(f'El numero {n} es NEUTRO')
