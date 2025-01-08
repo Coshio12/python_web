@@ -33,5 +33,3 @@ while C < 10: #se ejucatara el codigo mientras C sea menor que 10
         print('Saltar de iteracion')
         continue
     print("Despues de continue")
-else:
-    print('Fin de while')
