@@ -2,18 +2,20 @@
 #Es una palabra reservada "if" que se encarga de realizar una operacion si se cumple una condicion
 
 #Esta es la siguiente sintaxis
-if True:
+a = True
+if a:
     print('Se cumple la condicion')
 #Cuando un if se cumple o devuelve un True como respuesta correcta se ejecuta lo que esta en la siguiente linea
 #de codigo siempre y cuando este con una sangria
 
 #Cuando devuelve un False, no ejecuta nada, realiza la comparacion pero no ejecuta la accion indicada
-if False:
+b = False
+if b:
     print('Se cumple la condicion')
 
 #Pero al usar la para reservada "else" primero detecta que es false y salta a la siguiente operacion que tiene el else
 #Realizando una operacion
-if False:
+if b:
     print("Se cumplio")
 else:
     print('No se cumplio')
