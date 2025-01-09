@@ -1,4 +1,7 @@
 """
+    Aplicando lo aprendido en esta seccion, intenta resolver el siguiente problema
+    antes de ver el codigo final
+    
     Enunciado:Un restaurante ofrece un descuento del 10% para consumos de hasta 100 soles y un 
     descuento del 20% para consumos mayores, para ambos casos se aplica un impuesto del 19%. 
     Determinar el monto del descuento, el monto del impuesto y el total a pagar 
