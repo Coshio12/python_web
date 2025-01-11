@@ -50,33 +50,3 @@ def saludar_4():
 saludar_4()
 print('La variable global esta aqui: ',nombre_apellido)
 #Con la variable global permitara usar una variable en cualquier parte de la aplicacion
-
-
-#PARAMETROS Y ARGUMENTOS
-def saludo(nombre):#parametros
-    edad = 25
-    return f'Hola, {nombre} desde la funcion SALUDO'
-
-def sumar(numero1, numero2):
-    return numero1 + numero2
-
-def restar(numero1, numero2):
-    return numero1- numero2
-
-def restando(a = None, b = None): #parametros por defecto
-    if a == None or b == None:
-        print('Debes enviar dos numeros a la funcion')
-        return
-    return a - b
-
-saludando = saludo('Alejandro') #argumentos
-print(saludando)
-
-suma = sumar(12,8) #argumentos por posicion
-print(suma)
-
-resta = restar(numero2=20, numero1=40) #argumentos por nombre
-print(resta)
-
-resta = restando() 
-print(resta)
