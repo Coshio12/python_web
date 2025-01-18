@@ -25,6 +25,7 @@ class Empleado(Persona):
     def __init__(self, nombre, apellido,sueldo):
         #Usamos la funcion super para llamar y utilizar toda la informacion de la clase padre Persona
         super().__init__(nombre, apellido)
+        #Persona.__init__(self, nombre, apellido) #Forma de heredar sin el super
         #Y inicializamos la variable propia del objeto
         self.sueldo = sueldo
     
@@ -32,6 +33,7 @@ class Empleado(Persona):
     def detalle_empleado(self):
         #Heredamos todo el metodo de detalle_persona
         super().detalle_persona()
+        #Persona.detalle_persona(self) #Forma de heredar sin el super
         #Y le aumentados el print del sueldo
         print('Sueldo: ', self.sueldo)
     
@@ -39,5 +41,6 @@ class Empleado(Persona):
     def __str__(self):
         #en el return usamos la funcion super y concatenamos el valor de sueldo para mostrar la informacion
         return super().__str__() + f'\nSueldo: {self.sueldo}'
+        #return Persona.__str__(self)+ f'\nSueldo: {self.sueldo}' #Forma de heredar sin el super
 
 #Ahora con todo modificado volvemos al main
