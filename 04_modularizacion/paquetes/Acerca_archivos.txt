@@ -1,0 +1,17 @@
+En estos archivos de paquetes vamos a explicar como funcionan los paquetes al momento de crear
+aplicaciones mas grandes
+
+Dentro de una aplicacion una organizacion por paquetes hace que el proyecto sea mas facil de crear y escalar
+
+Para crear eso primero se crea un paquete padre (my_paquete en este caso) y dentro de el el archivo main donde tendra la logica
+de solicitud de informacion o llamado de los metodos que se creen necesarios para crear una aplicacion
+
+Despues dentro de my_paquete creamos los diferentes archivos/scripts que necesitemos para crear nuestra aplicacion
+Pero es obligatorio para volver a my_paquete un paquete segun la documantacion de python debemos crear el archivo __init__
+que puede estar vacio.
+
+Despues dentro del paquete creamos los archivos que querramos, en este caso se crea un archivo de aritmetica con diferentes operaciones
+aritmeticas bascias
+
+Y despues en main.py importamos el paquete con sus metodos/scripts y los usamos para crear una aplicacion
+De esta forma se usan los paquetes
