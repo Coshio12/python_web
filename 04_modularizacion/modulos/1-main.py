@@ -62,5 +62,8 @@ print('='*45)
 #O tambien podemos solo imprimir dir() sin ningun argumento
 print(dir())
 
-#NOTA: ESTE ARCHIVO ESTA SIGUIENDO MALAS PRACTICAS DE CODIGO LIMPIO
+#NOTAS: ESTE ARCHIVO ESTA SIGUIENDO MALAS PRACTICAS DE CODIGO LIMPIO
 #SE LO CREO DE ESA FORMA PARA SEGUIR UNA COHERENCIA Y FACIL ENTENDIMIENTO
+
+#Al ejecutarse este script crea un archivo compilado _pycahe_ que esta en codigo que se puede leer con
+#Uncompyle6, PYCDC, PyCharm
