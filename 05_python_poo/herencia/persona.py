@@ -14,6 +14,30 @@ class Persona:
         return f'Nombre: {self.nombre} \nApellido: {self.apellido}'
 
 #Ahora crearemos una clase que recibe como parametro la clase padre en este caso Persona
-#Y no haremos nada mas asi que colocamos pass
+#Y no haremos nada mas asi que colocamos pass y volveremos al main
 class Cliente(Persona):
     pass
+
+#Ahora vamos a aumentar a los metodos heredados mas informacion segun lo que necesitamos
+#Creamos una clase empleado
+class Empleado(Persona):
+    #Creamos el constructor y le añadimos un atributo propio del objeto que sera sueldo
+    def __init__(self, nombre, apellido,sueldo):
+        #Usamos la funcion super para llamar y utilizar toda la informacion de la clase padre Persona
+        super().__init__(nombre, apellido)
+        #Y inicializamos la variable propia del objeto
+        self.sueldo = sueldo
+    
+    #Creamos un metodo para mostrar la informacion del empleadp
+    def detalle_empleado(self):
+        #Heredamos todo el metodo de detalle_persona
+        super().detalle_persona()
+        #Y le aumentados el print del sueldo
+        print('Sueldo: ', self.sueldo)
+    
+    #Creamos el metodo para ver el estado del objeto
+    def __str__(self):
+        #en el return usamos la funcion super y concatenamos el valor de sueldo para mostrar la informacion
+        return super().__str__() + f'\nSueldo: {self.sueldo}'
+
+#Ahora con todo modificado volvemos al main
