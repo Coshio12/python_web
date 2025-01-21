@@ -1,1 +1,18 @@
+# Entorno virtual
+venv/
+.venv/
+env/
+
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Configuración del entorno
 .env
+
+#git
+.gitignore
+
+#parcialmente
+07_proyecto_tkinder/
