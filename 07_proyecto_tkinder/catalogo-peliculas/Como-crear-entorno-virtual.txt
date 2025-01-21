@@ -1,0 +1,40 @@
+Para este proyecto vamos a crear una carpeta del proyecto-tkinder y dentro de esta carpeta
+vamos a crear otra carpeta que sera catalago-peliculas, despues con la consola del sistema operativo vamos a navegar hasta esta ultima carpeta
+
+Para crear un entorno virtual con python hay que ejuctar desde la terminal (sea la cmd de windows, el bash de git, o la terminal de linux)
+Ciertos comandos uno de esos es:
+
+python -m venv env
+
+Este comando es que mediante una libreria que usaremos que es venv vamos a crear un entorno virtual, al ejecutar este comando
+se nos creara 3 carpetas
+
+Inclue: que esta vacia
+Lib: Donde estan todas las librerias que podriamos llegar a utilizar
+Scripts: Donde estan las librerias instalas y los archivos para activar y desactivar nuestro entorno virtual
+
+Para activar el entorno virtual debemos estar en la carpeta anterior a env, en mi caso es catalago-peliculas
+y ejecutamos este comando
+
+env\Scripts\activate o tambien env\Scripts\activate.bat cualquiera es valida
+
+Despues debemos verificar si nuestra version de python es la misma tanto del python instalado en la computadora
+como el python del entorno virtual con python --version
+
+para salir del entorno virtual debemos usar el siguiente comando:
+env\Scripts\deactivate o env\Scripts\deactivate.bat
+
+Siguiendo esta logica tambien debemos verificar que la libreria de pip tengan la misma version tanto fuera como dentro del entorno virtual
+
+Si ejecutamos el siguiente comando:
+pip list
+Veremos todas las librerias que hemos descargado
+
+Una de las librerias que mas utilizaremos es pylint
+para ello ejecutamos: pip install pylint
+y verificamos si se instalo con pip list
+
+y tambien usaremos la libreria autopep8 para ello debemos instalarlo
+ejecutamos: pip install autopep8 y verificamos si se instalo con pip list
+
+Con ello ya tenemos todo el entorno virtual preparado para poder comenzar a crear un proyecto
