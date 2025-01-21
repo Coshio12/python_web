@@ -30,6 +30,10 @@ Introducción a la Programación Orientada a Objetos (POO): clases, objetos, her
 
 Gestiona excepciones y errores comunes en Python y aprende a trabajar con archivos para lectura y escritura de datos.
 
+### **07\_proyecto\_tkinder**
+
+Con todo lo aprendido ahora creamos nuestra aplicacion con una interfaz de usuario mas amigable, usando la libreria de Tkinder
+
 ### **Próximamente...**
 
 El repositorio culminará con el desarrollo de aplicaciones web con Django, donde integrarás todo lo aprendido y construirás aplicaciones web modernas y escalables.
