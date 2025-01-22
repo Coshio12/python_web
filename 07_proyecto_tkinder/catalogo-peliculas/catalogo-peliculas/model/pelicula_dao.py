@@ -25,3 +25,4 @@ def borrar_tabla():
     conexion.cursor.execute(sql)
     conexion.cerrar()
     
+    

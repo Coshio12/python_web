@@ -9,3 +9,4 @@ class ConexionDB:
     def cerrar(self):
         self.conexion.commit()
         self.conexion.close()
+        
