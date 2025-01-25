@@ -10,16 +10,27 @@ import tkinter as tk
 #Importamos una clase que esta en la carpeta client y haciendo referencia al archivo deseado y importamos el metodo frame
 from client.gui_app import Frame, barra_menu
 
+import os 
+import sys
+
+def resource_path(relative_path):
+    """Obtiene la ruta absoluta de un archivo, compatible con ejecutables."""
+    base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(base_path, relative_path)
+
 #Creamos la funcion main
 def main():
     #creamos un objeto de tkinder con Tk() que generara una ventana
     root = tk.Tk()
     #Cambiamos el titulo
     root.title('Catalogo de Peliculas')
+    
+    
+    icon_path = resource_path('./img/logo.ico')
     #Cambiamos el icono de la ventana
     #Se le debe pasar un argumento el cual es la ruta donde esta la imagen y debe ser .ico
     #La imagen esta en la carpeta img
-    root.iconbitmap('img/cp-logo.ico')
+    root.iconbitmap(icon_path)
     #Bloque la modificacion del tamaño de la ventana
     root.resizable(0,0)
     barra_menu(root)

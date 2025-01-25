@@ -15,3 +15,6 @@ __pycache__/
 .gitignore
 
 #parcialmente
+build/
+dist/
+catalogo_peliculas.spec

@@ -6,7 +6,7 @@ from tkinter import ttk
 
 from model.pelicula_dao import crear_tabla,borrar_tabla
 
-from model.pelicula_dao import Pelicula, guardar, listar,editar
+from model.pelicula_dao import Pelicula, guardar, listar,editar, eliminar
 
 from tkinter import messagebox as mg
 
@@ -170,6 +170,7 @@ class Frame(tk.Frame):
     #Creamos el metodo de desahabilitar campos
     def desabilitar_campos(self):
         #Le pasamos a los campos datos vacios
+        self.id_pelicula = None
         self.mi_nombre.set('')
         self.mi_duracion.set('')
         self.mi_genero.set('')
@@ -237,7 +238,7 @@ class Frame(tk.Frame):
             )
         self.boton_editar.grid(row=5,column=0, padx=10, pady=10)#Dibuja el boton
         
-        self.boton_eliminar = tk.Button(self, text= 'ELIMINAR')
+        self.boton_eliminar = tk.Button(self, text= 'ELIMINAR', command=self.eliminar_datos)
         self.boton_eliminar.config(
             width=20, 
             bg='#BD152E',
@@ -272,3 +273,18 @@ class Frame(tk.Frame):
             titulo = 'Edicion de datos'
             mensaje = 'No se ha seleccionado ningun registro'
             mg.showerror(titulo,mensaje)
+            
+    def eliminar_datos(self):
+        try:
+            self.id_pelicula = self.tabla.item(self.tabla.selection())['text']
+            eliminar(self.id_pelicula)
+            
+            self.tabla_peliculas()
+            
+            self.id_pelicula = None
+        except:
+            titulo = 'Eliminacion de datos'
+            mensaje = 'No se ha seleccionado ningun registro'
+            mg.showerror(titulo,mensaje)
+            
+    

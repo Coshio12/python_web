@@ -59,6 +59,9 @@ def guardar(pelicula):
     '''
     try:
         conexion.cursor.execute(sql)
+        titulo = 'BASE DE DATOS'
+        mensaje = 'Se ha guardado el registro'
+        mg.showinfo(titulo,mensaje)
         conexion.cerrar()
     except:
         titulo = 'Conexion al Registro'
@@ -94,8 +97,28 @@ def editar(pelicula, id_pelicula):
     
     try:
         conexion.cursor.execute(sql)
+        titulo = 'BASE DE DATOS'
+        mensaje = 'Se ha editado el registro'
+        mg.showinfo(titulo,mensaje)
         conexion.cerrar()
     except:
         titulo = 'Edicion de datos'
         mensaje = 'No se ha podido editar este registro'
         mg.showerror(titulo,mensaje)
+        
+def eliminar(id_pelicula):
+    conexion = ConexionDB()
+    sql =f'''
+        DELETE FROM peliculas WHERE id_pelicula = {id_pelicula}
+    '''
+    
+    try:
+        conexion.cursor.execute(sql)
+        titulo = 'BASE DE DATOS'
+        mensaje = 'Se ha borrado el registro'
+        mg.showinfo(titulo, mensaje)
+        conexion.cerrar()
+    except:
+        titulo = 'Eliminar Datos'
+        mensaje = 'No se ha podido eliminar este registro'
+        mg.showerror(titulo, mensaje)

@@ -1,0 +1,37 @@
+Una vez terminado el proyecto, ya esta listo para llevar a produccion, para ello se tiene que realizar
+unos pasos para poder configurar las especificaciones necesarias para que el proyecto funcione
+
+Primeramente tenemos que entrar al entorno virtual desde la consola
+env\Scripts\activate
+
+Una vez dentro, hay que navegar entre las carpetas llegando a la carpeta principal del proyecto
+sabremos la ubicacion perfecta cuando al ejectar
+
+dir o ls
+
+Las carpetas que muestren sean cliente, database, img, model,....etc.
+
+Dentro de esta ruta instalaremos pyinstaller con el comando 
+
+pip install pyinstaller
+
+Despues tenemos que ejectar el siguiente comando
+
+pyi-makespec catalogo_peliculas.py --windowed
+Este comando creara dentro de la carpeta principal las especificaciones necesarias que necesita la aplicacion
+para poder funcionar, este archivo termina con .spec y debemos realizar modificaciones en este archivo desde el vscode
+
+Este archivo tiene diferentes configuraciones, pero tenemos que agregar tanto las imagenes como la carpeta de base de datos
+para ello tenemos que localizar una linea que tenga: "datas=[]" y colocar lo siguiente
+
+datas=[('./img/*.ico','img'),('./database/*.db','database')],
+
+Esto linea nos indica que localice la carpeta img y guarde todos los archivos con terminacion .ico y lo guarde
+en una carpeta que se llame img, siguiendo esa logica hay que hacer lo mismo para la base de datos
+
+Y el ultimo paso es crear el ejecutable, volvemos al entorno virtual y ejecutamos el siguiente comando
+
+pyinstaller catalogo_peliculas.spec
+
+Esto creara dos carpetas en la rama principal del proyecto, estas carpetas son build y dist
+En la carpeta dist esta el ejecutable del proyecto
