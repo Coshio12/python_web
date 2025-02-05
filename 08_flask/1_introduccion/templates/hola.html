@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Saludar</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        {% comment %} 
+            Creamos un if donde valor a verificar ciertas condiciones para mostrar una determinada informacion
+            en este caso comparemos si nombre es diferente de Nono mostraremos la edad, caso que no se cumpla
+            esa condicion, pasara a la siguiente que es si tanto nombre como edad son diferentes de none mostrara la informacion
+
+            para pasarle la informacion a la plantilla se hace con llaves dobles y dentro la variable segun el codigo
+            de python
+        {% endcomment %}
+        {% if nombre != None and edad == None %}
+            <h2>Hola {{nombre}}</h2>    
+        {% elif nombre != None and edad != None %}
+            <h2>Hola {{nombre}}</h2>    
+            <h2>Tu edad es {{edad}}</h2>    
+        {%endif%}
+        
+        <script src="" async defer></script>
+    </body>
+</html>

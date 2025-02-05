@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+</head>
+<body>
+    <h1> Mis blogs </h1>
+    {% comment %} 
+        Si queremos crear enlaces para poder movernos entre paginas hjaciendo que la pagina sea dinamica
+
+        tenemos que mandarle un url_for y que reciba como parametro el nombre del archivo html donde querramos ir
+        Este url_for ira directamente a la carpeta templates y buscara el archivo
+    {% endcomment %}
+    <a href="{{url_for('hola')}}">Pagina de inicio</a>
+
+    {% comment %} 
+        Tambien creamos un ciclo for para poder imprimir la informacion de la variab le blogs
+        Permitiendonos acceder a la informacion de los objetos, simplemente llamandolos
+    {% endcomment %}
+    {% for blog in blogs %}
+        <h3>{{blog.titulo}}</h3>
+        <p>{{blog.descripcion}}<p>
+    {% endfor %}
+</body>
+</html>
